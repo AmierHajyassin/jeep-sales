@@ -15,6 +15,7 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.servers.Server;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @RequestMapping("/jeeps")
 @OpenAPIDefinition(info = @Info(title = "Jeep Sales Service"), servers = {
@@ -60,11 +61,13 @@ public interface JeepSalesController{
 
       }
    )
-  //@formatter:on
+
   
   @GetMapping
   @ResponseStatus(code = HttpStatus.OK)
-  List<Jeep> fetchJeeps(JeepModel model, String trim);
   
+  List<Jeep> fetchJeeps(@RequestParam (required = false) JeepModel model, 
+      @RequestParam (required = false) String trim);
+//@formatter:on
 }
 

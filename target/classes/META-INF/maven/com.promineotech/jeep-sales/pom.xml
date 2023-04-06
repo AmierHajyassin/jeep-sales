@@ -7,9 +7,9 @@
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>2.7.6</version>
-    <relativePath/> <!-- lookup parent from repository -->
+    <relativePath /> <!-- lookup parent from repository -->
   </parent>
-  
+   
   <groupId>com.promineotech</groupId>
   <artifactId>jeep-sales</artifactId>
   <version>1.0.0.1-SNAPSHOT</version>
@@ -73,7 +73,13 @@
     </dependency>
 
     <!-- Test dependencies ============================================== -->
+    <!-- H2 In-memory Database dependency =============================== -->
     
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <scope>test</scope>
+    </dependency>
     
     
     
