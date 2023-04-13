@@ -32,7 +32,7 @@ public interface JeepSalesController{
               description = "A list of Jeep is returned", 
               content = @Content(
                   mediaType = "application/json", 
-                  schema = @Schema(implementation = Jeep.class))), //200 is and okay status
+                  schema = @Schema(implementation = Jeep.class))), //200 is an okay status
           @ApiResponse(
               responseCode = "400", 
               description = "The request paramaters are invalid",
@@ -69,5 +69,6 @@ public interface JeepSalesController{
   List<Jeep> fetchJeeps(@RequestParam (required = false) JeepModel model, 
       @RequestParam (required = false) String trim);
 //@formatter:on
+
 }
 
