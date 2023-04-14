@@ -11,9 +11,7 @@ public interface JeepsSalesService {
    * @param trim
    * @return
    */
-  static List<Jeep> fetchJeeps(JeepModel model, String trim) {
-    // TODO Auto-generated method stub
-    return null;
-  }
+   List<Jeep> fetchJeeps(JeepModel model, String trim);
+   
 
 }

@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.promineotech.jeep.entity.Jeep;
 import com.promineotech.jeep.entity.JeepModel;
 import com.promineotech.jeep.service.JeepsSalesService;
-import com.promineotech.jeep.entity.JeepModel;
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
@@ -15,12 +14,12 @@ public class DefaultJeepSalesController implements JeepSalesController {
   
   
   @Autowired
-  private JeepsSalesService jeepSaleService; 
+  private JeepsSalesService jeepSalesService; 
   
   @Override
   public List<Jeep> fetchJeeps(JeepModel model, String trim) {
     log.debug("model = {}, trim = {}", model, trim );
-    return JeepsSalesService.fetchJeeps(model, trim);
+    return jeepSalesService.fetchJeeps(model, trim);
   }
 
 

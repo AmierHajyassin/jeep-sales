@@ -3,6 +3,7 @@ package com.promineotech.jeep.service;
 import java.util.List;
 import org.springframework.stereotype.Service;
 import com.promineotech.jeep.entity.Jeep;
+import com.promineotech.jeep.entity.JeepModel;
 import lombok.extern.slf4j.Slf4j;
 
 
@@ -11,14 +12,16 @@ import lombok.extern.slf4j.Slf4j;
 public class DefaultJeepSaleService implements JeepsSalesService {
   
 
-  //@Override
-  public List<Jeep> fetchJeeps(String model, String trim) {
-    log.info("These fetchJeeps method was called with model={} and trim={}",
-            model, trim);
-    
-    
-    return null;
-  }
+  @Override
+  public List<Jeep> fetchJeeps(JeepModel model, String trim) {
+     log.info("These fetchJeeps method was called with model={} and trim={}",
+           model, trim);
+   
+   
+   return null;
+ }
+
+  
 
 }
 
